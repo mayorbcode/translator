@@ -2,14 +2,14 @@ import React from 'react';
 import { useTranslateContext } from '../contexts/ContextProvider';
 
 const Input = () => {
-  const { input, handleInput, inputLanguage, handleInputSelect, languages, handleSubmit, loading } = useTranslateContext();
+  const { input, handleInput, inputLanguage, handleInputSelect, languages } = useTranslateContext();
 
   const languageOptions = languages.map((item, index) => {
     return <option key={item[1].nativeName} data-value={item[0]} value={item[1].name}></option>
   })
   return (
     <div className="input">
-      <form action="#" onSubmit={handleSubmit}>
+      <form>
         <div>
           <label htmlFor="data">Select Input Language</label>
           <input 
@@ -32,11 +32,6 @@ const Input = () => {
             onChange={handleInput}
           />
         </div>
-        <button
-          disabled={loading}
-        >
-          Translate
-        </button>
       </form>
     </div>
   )

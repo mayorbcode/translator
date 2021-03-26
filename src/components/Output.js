@@ -9,7 +9,7 @@ const Output = () => {
   })
   return (
     <div className="output">
-      <div>
+      <div className="select">
           <label htmlFor="data1">Select Output Language</label>
           <input 
             type="text" 
@@ -24,8 +24,8 @@ const Output = () => {
           </datalist>
         </div>
       <div className="result">
-        <h2>Result</h2>
-        <p className="text" style={{ padding: `${result ? '20px' : '0'}`, border: `${result ? '1px solid black' : 'none'}`}}>
+        <p>Translation</p>
+        <p className="text">
           {result && result}
         </p>
       </div>

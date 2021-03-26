@@ -39,23 +39,23 @@ const ContextProvider = ({children}) => {
   }
 
   const handleInputSelect = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     setInputLanguage(e.target.value);
   }
   const handleOutputSelect = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     setOutputLanguage(e.target.value);
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const apiURL = "http://localhost:3001/translate";
+    const apiURL = "http://translatorendpoint-env.eba-fphmv3jp.us-east-2.elasticbeanstalk.com/translate";
     const fromArray = languages.find(language => language[1].name === inputLanguage);
     const from = fromArray ? fromArray[0] : null;
     const toArray = languages.find(language => language[1].name === outputLanguage);
     const to = toArray ? toArray[0] : null;
-    console.log(from);
-    console.log(to);
+    // console.log(from);
+    // console.log(to);
       if (from !== null && to !== null) {
         try {
           setLoading(true);
@@ -75,8 +75,8 @@ const ContextProvider = ({children}) => {
             "location": process.env.REACT_APP_AZURE_API_REGION,
           }
           const response = await axios.post(apiURL, data, { params, headers })
-          console.log(response.data);
-          console.log(response.data[0].translations[0].text);
+          // console.log(response.data);
+          // console.log(response.data[0].translations[0].text);
           setResult(response.data[0].translations[0].text);
         }
         catch (err) {

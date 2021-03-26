@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Input from './components/Input';
 import Output from './components/Output';
+import SubmitButton from './components/SubmitButton';
 import { useTranslateContext } from './contexts/ContextProvider';
 
 const App = (props) => {
@@ -16,6 +17,7 @@ const App = (props) => {
         <Input />
         <Output />
       </div>
+      <SubmitButton />
     </div>
   );
 }
