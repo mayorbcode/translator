@@ -10,6 +10,7 @@ const App = (props) => {
 
   return (
     <div className="app">
+      <h1>Translator</h1>
       <div className="error">
         {error.length > 0 && <h2>{error}</h2>}
       </div>

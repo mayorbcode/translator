@@ -1,8 +1,15 @@
+body  {
+  margin: 0;
+  background-color: #F5F5F5;
+  background-color: #E1E1E1;
+}
+
 .app {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 80vh;
   align-items: center;
+  justify-content: center;
 }
 
 .app .error h2{
@@ -18,13 +25,10 @@
 
 .input, .output {
   display: flex;
-  /* width: 49%; */
-  /* width: 300px; */
   min-width: 300px;
   flex-direction: column;
   align-items: center;
   margin: 1px;
-  /* justify-content: center; */
 }
 
 form > * {
@@ -37,38 +41,6 @@ form {
   align-items: center;
 }
 
-/* form button {
-  border: 1px solid lightgray;
-  border-radius: 15px;
-  margin: auto;
-  padding: 5px 20px;
-  color: white;
-  background-color: #0ba6ff;
-  font-size: 1.2rem;
-  transition: background-color 0.35s;
-}
-
-form button:hover {
-  cursor: pointer;
-  background-color: #0087d5;
-} */
-
-.submit-button button {
-  border: 1px solid lightgray;
-  border-radius: 15px;
-  margin: auto;
-  padding: 5px 20px;
-  color: white;
-  background-color: #0ba6ff;
-  font-size: 1.2rem;
-  transition: background-color 0.35s;
-}
-
-.submit-button button:hover {
-  cursor: pointer;
-  background-color: #0087d5;
-}
-
 form div , .output > div {
   display: flex;
   flex-direction: column;
@@ -76,16 +48,14 @@ form div , .output > div {
 
 form textarea {
   padding: 10px 20px;
-  /* max-width: 350px;
-  min-width: 250px; */
   width: 350px;
   min-height: 100px;
+  max-width: 80vw;
 }
 
 #data, #data1 {
   width: 220px;
 }
-
 
 .output .select {
   margin: 1rem;
@@ -105,12 +75,28 @@ form textarea {
   width: 350px;
   min-height: 100px;
   padding: 10px 20px;
+  max-width: 80vw;
+  background-color: white;
 }
 
-@media (max-width: 500px) {
-  .output .result p {
-    max-width: 80vw;
-  }
+.submit-button {
+  margin: 20px auto;
+}
+
+.submit-button button {
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  margin: auto;
+  padding: 5px 20px;
+  color: white;
+  background-color: #0ba6ff;
+  font-size: 1.2rem;
+  transition: background-color 0.35s;
+}
+
+.submit-button button:hover {
+  cursor: pointer;
+  background-color: #0087d5;
 }
 
 @media (max-width: 400px) {
@@ -118,13 +104,3 @@ form textarea {
     min-width: 100%;
   }
 }
-
-/* #input-form {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-.test-select {
-  width: 500px !important;
-} */
