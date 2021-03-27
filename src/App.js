@@ -10,9 +10,9 @@ const App = (props) => {
 
   return (
     <div className="app">
-      <h1>Translator</h1>
+      <h1 className="title">Translator</h1>
       <div className="error">
-        {error.length > 0 && <h2>{error}</h2>}
+        {error.length > 0 && <h2>Error: {error}</h2>}
       </div>
       <div className="boxes">
         <Input />

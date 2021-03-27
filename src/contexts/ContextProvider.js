@@ -49,7 +49,7 @@ const ContextProvider = ({children}) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const apiURL = "http://translatorendpoint-env.eba-fphmv3jp.us-east-2.elasticbeanstalk.com/translate";
+    const apiURL = "https://translator-endpoint.herokuapp.com/translate";
     const fromArray = languages.find(language => language[1].name === inputLanguage);
     const from = fromArray ? fromArray[0] : null;
     const toArray = languages.find(language => language[1].name === outputLanguage);
@@ -70,11 +70,7 @@ const ContextProvider = ({children}) => {
             'from': from,
             'to': to
           }
-          const headers = {
-            "key": process.env.REACT_APP_AZURE_API_KEY_1,
-            "location": process.env.REACT_APP_AZURE_API_REGION,
-          }
-          const response = await axios.post(apiURL, data, { params, headers })
+          const response = await axios.post(apiURL, data, { params })
           // console.log(response.data);
           // console.log(response.data[0].translations[0].text);
           setResult(response.data[0].translations[0].text);

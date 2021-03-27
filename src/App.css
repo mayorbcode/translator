@@ -1,7 +1,19 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Fira+Sans&display=swap');
+
+
 body  {
   margin: 0;
-  background-color: #F5F5F5;
-  background-color: #E1E1E1;
+  background-color: #F7F7F7;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+/* h1, h2, h3, h4, h5, h6, legend, button, input, textarea {
+  font-family: 'Cardo', serif, sans-serif;
+} */
+
+h1, h2, h3, h4, h5, h6, legend, button {
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .app {
@@ -12,7 +24,11 @@ body  {
   justify-content: center;
 }
 
-.app .error h2{
+.title {
+  font-size: 3rem;
+}
+
+.app .error h2 {
   text-align: center;
 }
 
@@ -63,6 +79,8 @@ form textarea {
 
 .output .result {
   margin: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .output .result p {
@@ -76,7 +94,11 @@ form textarea {
   min-height: 100px;
   padding: 10px 20px;
   max-width: 80vw;
-  background-color: white;
+  background-color: #E7E7E7;
+}
+
+.output .text:hover {
+  cursor: text;
 }
 
 .submit-button {
@@ -99,8 +121,6 @@ form textarea {
   background-color: #0087d5;
 }
 
-@media (max-width: 400px) {
-  .input, .output {
-    min-width: 100%;
-  }
+.error {
+  color: red;
 }

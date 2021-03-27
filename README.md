@@ -10,5 +10,5 @@ Whip up an app that takes in words from a specified language and translates them
 [Node](https://nodejs.org/en/) and [Express](https://expressjs.com/) for the endpoint.  
 
 ## Todo  
-  - Hella CSS stuff.  
+  - Prettify it Patrick. You're better than this.  
   - Explore adding input language detection.
