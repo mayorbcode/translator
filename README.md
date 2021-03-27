@@ -1,6 +1,8 @@
 # Translator App  
 by [Patrick Bello](https://github.com/mayorbcode)  
 
+## [App Link](https://mayorbcode.github.io/translator/)  
+
 ## Objective  
 Whip up an app that takes in words from a specified language and translates them to another specified language using [this](https://github.com/mayorbcode/translator-endpoint) endpoint i made.  
 
